@@ -1,0 +1,44 @@
+<web-app id="WebApp_ID" version = "2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+    http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>com.shani.controller.FrontController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/FrontController</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>HelloWeb</servlet-name>
+        <jsp-file>/WEB-INF/jsp/hello.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWeb</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CreateRoom</servlet-name>
+        <jsp-file>/WEB-INF/jsp/room.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CreateRoom</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RoomsCreated</servlet-name>
+        <jsp-file>/WEB-INF/jsp/index.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoomsCreated</servlet-name>
+        <url-pattern>/room</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
